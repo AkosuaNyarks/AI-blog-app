@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       .load {
+            border: 8px solid rgba(0,0,0,0.1); /* Light grey border */
+            border-top: 8px solid #3498db; /* Blue border */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        } 
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font sans antialised">
+    <!--Navigation Bar-->    
+    <nav class ="bg-blue-600 p-4 text-white flex justify-between">
+        <div>
+            <h1 class ="text-3xl-font-bold">AI Blog Generator</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Logout</a>
+        </div>
+    </nav>
+    
+    <br>
+    <br>
+    <!--Main-->
+    <div class="flex-grow containermx-auto mt-10 px-4 sm:px-0">
+        <div class="max-w-3xl-mx-auto bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105 flex-col">
+
+            <!--Introduction to page-->
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold mb-4">Welcome to the AI Blog Generator</h2>
+                <p class="text-gray-700"> Generate High quality blogs from youtube videos using Artificial Intelligence.
+                    Just enter the link and let the AI create content for you</p>
+            </div>
+
+            <br>
+            <!--Youtube input section-->
+            <div>
+                <h2 class="text-xl mb-4 font-semibold">Enter a Youtube Video link</h2>
+                <div class="flex-space-x-4">
+                    <input id="youtube Link" type="url" placeholder="Paste Youtube Link..." class="flex-grow p-2 border border-blue-40 rounded-lg">
+                    <button id="generateBlogButton" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors">Generate</button>
+
+                </div>
+            </div>
+
+            <!--Section for loading circle-->
+            <div class="flex justify-center items-center min-h-screen">
+
+                <div style="display: none;" id="loading-circle" class="load"></div>
+
+            </div>
+            
+            <!--Generated blog display section-->
+            <section class="mt-10 flex-grow">
+                
+                <h2 class="text-xl mb-4 font font-semibold">Generated Blog Article</h2>
+                <div id="blogContent" class="mt-2 text-gray-700 space-y-4">
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="text-center p-4 text-black mt-6">
+        Created by <a>Nyarks</a> 
+    </footer>
+    <script>
+
+
+    </script>
+</body>
+</html>
